@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hunting</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+  <h3 class="text-2xl">Hunting Phone</h3>
+
+  <section class="bg-slate-500 p-4 m-4">
+    <input type="text" id="search_fild" placeholder="search..." class="input input-bordered w-full max-w-xs" />
+    <button onclick="searchPh()" class="btn btn-success">Success</button>
+  </section>
+
+  <section id="loading_spanner" class="flex justify-center hidden">
+    <span class="loading loading-spinner text-warning "></span>
+  </section>
+
+  <div id="cardId" class="grid grid-cols-3 gap-4">
+    <!-- <div class="card w-96 bg-base-100 shadow-xl">
+        <figure class="px-10 pt-10">
+          <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
+        </figure>
+        <div class="card-body items-center text-center">
+          <h2 class="card-title">Shoes!</h2>
+          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <div class="card-actions">
+            <button class="btn btn-primary">Buy Now</button>
+          </div>
+        </div>
+      </div> -->
+  </div>
+
+  <section id="showAllButton" class="flex justify-center m-8 hidden">
+    <button onclick="showAllPhotos()" class="btn btn-success">Show all</button>
+  </section>
+
+  <section>
+    <!-- Open the modal using ID.showModal() method -->
+
+    <dialog id="show_model_details" class="modal modal-bottom sm:modal-middle">
+
+      <div class="modal-box">
+
+        <div id="show_phone_detailes" class="grid grid-cols-1 gap-3">
+        </div>
+
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+  </section>
+
+  <script src="APIconnection.js"></script>
+</body>
+
+</html>
